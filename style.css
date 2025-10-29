@@ -1,0 +1,205 @@
+ @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Roboto+Slab:wght@100..900&display=swap');
+
+main{
+    margin: 30px;
+}
+
+header{
+    padding: 30px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+h1{
+    font-family: Leckerli One;
+    color: bisque;
+    font-weight: normal;
+    font-size: xxx-large;
+    margin: 0px;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #D3AF37; /* cor da borda */
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color: #790505;
+    background-image: url(img/background.png);
+    background-size: 750px;
+    font-size: large;
+    font-family: Roboto Slab;
+    margin: 0px;
+}
+.cartao{
+    background-image: url(img/fundo.png);
+    width: 465px;
+    aspect-ratio: 640 / 440; /* mantém proporção 700x500 */
+    padding: 30px;
+    display: flex;
+    transition: 0.5s;
+    margin-bottom: 30px;
+    background-size: cover;       /* cobre toda a div */
+    background-position: center;  /* centraliza */
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cartao:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.cartao:nth-child(odd) {
+    align-self: flex-start;
+    rotate: -3deg;
+}
+
+.cartao:nth-child(odd):hover {
+    rotate: 0deg;
+}
+
+.cartao:nth-child(even) {
+    align-self: flex-end;
+    rotate: 3deg;
+}
+
+.cartao:nth-child(even):hover {
+    rotate: 0deg;
+}
+
+img{
+    width: 50%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.info{
+    width: calc(50% - 15px);
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+a{
+    width: calc(100% - 30);
+    background-color: rgb(19, 117, 19);
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+}
+a:hover{
+    background: rgb(44, 155, 44);
+    scale: 1.05;
+    transition: 0.3s;
+}
+h2{
+    margin: 5px 0;
+    margin-top: 0px;
+}
+h3{
+    margin: 5px 0;
+}
+
+footer{
+    background-color: rgb(10, 68, 13);
+    margin: 0px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+main p{
+    margin: 0;
+}
+
+@media screen and (max-width: 585px){
+    body{
+        font-size: medium;
+    }
+    main{
+        margin: 15px;
+    }
+    .cartao{
+        width: calc(100% - 40px);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    /* main p{
+        display: none;
+    } */
+
+    .cartao:nth-child(odd) {
+        align-self: center;
+    }
+
+    .cartao:nth-child(even) {
+        align-self: center;
+    }
+    h1{
+        font-size: xx-large;
+    }
+
+}
+
+ @media screen and (max-width: 370px){
+    body{
+        font-size: small;
+    }
+    .cartao{
+        width: calc(100% - 30px);
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    h1{
+        font-size: x-large;
+    }
+}
+
+@keyframes falljs {
+    0%   { transform: translateY(-10vh) translateX(0) rotate(0deg); }
+    100% { transform: translateY(110vh) translateX(80px) rotate(360deg); }
+}
+
+.carta{
+    background-image: url(img/fundo.png);
+    width: 465px;
+    aspect-ratio: 640 / 440; /* mantém proporção 700x500 */
+    padding: 30px;
+    transition: 0.5s;
+    margin-bottom: 30px;
+    background-size: cover;       /* cobre toda a div */
+    background-position: center;  /* centraliza */
+    background-repeat: no-repeat;
+    z-index: 1002;
+    margin: 20px;
+}
+
+#fundo{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+p span{
+    opacity: 0.5;
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: italic;
+}
