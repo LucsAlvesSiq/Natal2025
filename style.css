@@ -199,7 +199,9 @@ main p{
 
 p span{
     opacity: 0.5;
+    color: green;
     cursor: pointer;
     text-decoration: underline;
     font-style: italic;
 }
+
